@@ -169,4 +169,8 @@ a {
         grid-column-start: 2;
         grid-column-end: 3;
     }
+    .image-grid-gallery {
+        margin-top: 5rem;
+        padding: 5rem 0.5rem;
+    }
 }

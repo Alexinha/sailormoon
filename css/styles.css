@@ -289,6 +289,8 @@ a {
 
 .print-title h3 {
     font-size: 4vh;
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
 .print-title a {
@@ -299,6 +301,7 @@ a {
 .print-title p {
     color: rgba(145, 145, 145);
     font-size: 2vh;
+    line-height: 1.7;
 }
 
 .zine-pattern {
@@ -319,7 +322,7 @@ a {
     }
 
     .zine {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
@@ -418,12 +421,27 @@ img.pic-active {
         flex-direction: column-reverse;
     }
 
+    .gallery-preview {
+        max-width: 125%;
+    }
+
+    .gallery-highlight {
+        max-width: 110%;
+    }
+
+    .abandon {
+        display: none;
+    }
+
     .exhibition-footer {
         top: 10rem;
     }
 }
 
 /*******   ******    *****          subscribe page            ****    ******    **********/
+.small-screen {
+    display: none;
+}
 
 .sign-up-card {
     display: flex;
@@ -466,5 +484,17 @@ img.pic-active {
     .sign-up-card {
         max-width: 100%;
         height: 80vh;
+    }
+    .big-screen {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+        position: relative;
+        bottom: 8rem;
+    }
+    #mc_embed_signup h3, form{
+        position: relative;
+        bottom: 7rem;
     }
 }
