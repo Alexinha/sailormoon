@@ -1,0 +1,470 @@
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+/***************           header + menu + footer                     *********/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 4rem 2rem 3rem 2rem;
+    font-family: monospace, sans-serif;
+    font-weight: 200;
+    line-height: 2.5rem;
+    z-index: 999;
+    background-color: white;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-name {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.title-small {
+    font-size: 22px;
+    display: none;
+}
+
+.logo {
+    display: inline;
+
+}
+
+.divider {
+    width: 60px;
+    height: 0;
+    border: 1px solid;
+    border-color: rgba(196, 195, 195, 0.8);
+}
+
+.footer-large {
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-small {
+    display: none;
+}
+
+.site-info {
+    font-size: 13px;
+    font-weight: 200;
+    padding: 0 2rem 0 0;
+    line-height: 1.7rem;
+}
+
+.copyright {
+    font-size: 9px;
+    font-weight: 100;
+    padding-right: 2rem;
+    z-index: 4;
+
+}
+
+
+
+/**************     ***     home page gallery     ***              *************/
+#gallery {
+    position: relative;
+    left: 250px;
+}
+
+.gallery-row {
+    margin-top: 5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+    display: block;
+    height: auto;
+    max-width: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.gallery-item {
+    display: inline-block;
+}
+
+.card-img-top {
+    height: 620px;
+    width: auto;
+}
+
+.item-name {
+
+    font-size: 20px;
+    font-family: monospace, sans-serif;
+    text-align: center;
+}
+
+
+/* *********   *********     home page responsive       *****        ***************/
+@media (max-width: 1023px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 4rem 2rem 3rem 2rem;
+        font-family: monospace, sans-serif;
+        font-weight: 200;
+        line-height: 2.5rem;
+        z-index: 999;
+        background-color: white;
+        opacity: 0.8;
+    }
+
+    .footer-large {
+        display: none;
+
+    }
+
+    .footer-small {
+        display: block;
+        position: relative;
+        bottom: 0;
+        padding: 3rem 2rem 3rem 2rem;
+
+    }
+
+    .gallery-item {
+        display: block;
+        text-align: center;
+    }
+
+    .card-img-top {
+        height: auto;
+        width: auto;
+        max-width: 80%;
+    }
+
+    .gallery-row {
+        margin-top: 4rem;
+        padding: 1rem 0.5rem 0 0.5rem;
+        display: block;
+        height: auto;
+        max-width: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: normal;
+    }
+
+    #gallery {
+        position: relative;
+        left: 0;
+        margin-top: 150px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menu-name {
+        display: inline-block !important;
+    }
+
+    .menu-content {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    input:checked~.menu-content {
+        max-height: 100%;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .title-small {
+        font-size: 22px;
+        display: inline-block;
+        position: relative;
+        float: right;
+        top: 4px;
+
+    }
+}
+
+/****************    ******      about page     ******  ****************************/
+.intro-artist {
+    margin-top: 5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+}
+
+.intro-text {
+    width: 70%;
+    height: auto;
+    position: relative;
+    padding: 3.2rem;
+    text-align: left;
+    font-family: "space mono", monospace;
+    font-weight: 200;
+    line-height: 1.4rem;
+}
+
+.intro-title {
+    color: black;
+    font-size: 4vh;
+}
+
+.intro-content {
+    color: rgba(145, 145, 144);
+    font-size: 2vh;
+}
+
+.intro-image {
+    width: 70%;
+    height: auto;
+    position: relative;
+    padding: 0 3rem 3rem 3rem;
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+}
+
+/****************    ******      about page responsive     *****  ***********************/
+@media (max-width: 1023px) {
+
+    .intro-text {
+        width: 100%;
+        height: auto;
+    }
+
+    .intro-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-pic {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/****************    ******      buy print page     ******  *************************/
+.print {
+    width: 70%;
+    height: auto;
+    margin: 5.5rem 3rem 3rem 2rem;
+    padding: 0 5rem 5rem 5rem;
+    font-family: "space mono", monospace;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.print-title {
+    padding-bottom: 2rem;
+    color: rgb(80, 115, 56)
+}
+
+.zine {
+    max-width: 50%;
+    height: auto;
+}
+
+.print-title h3 {
+    font-size: 4vh;
+}
+
+.print-title a {
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+}
+
+.print-title p {
+    color: rgba(145, 145, 145);
+    font-size: 2vh;
+}
+
+.zine-pattern {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 1032px) {
+    .print {
+        width: 100%;
+        padding-top: 2rem;
+        margin: 5.5rem 0 3rem 0;
+    }
+
+    .zine-pattern {
+        flex-direction: column;
+    }
+
+    .zine {
+        max-width: 80%;
+    }
+}
+
+/*******   ******    *****          exhibitions page            ****    ******    **********/
+.exhibitions {
+    display: flex;
+    height: 100vh;
+}
+
+.exhibition-description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("../img/exhibitions/wave-breaker.jpg"); */
+    /* background-size: cover;  
+    background-color: rgb(96, 131, 163); */
+    font-family: "space mono", monospace;
+    text-shadow: 1px 1px 2px white;
+    z-index: 2;
+}
+
+.exhibition-description::before {
+    content: "";
+    background-image: url("../img/exhibitions/wave-breaker.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 70%;
+    opacity: 0.65;
+    z-index: -1;
+}
+
+.exhibition-description a {
+    text-decoration: underline;
+}
+
+.exhibition-description p {
+    padding: 0 2rem;
+}
+
+.exhibition-gallery {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-highlight {
+    max-height: 500px;
+    padding: 1rem;
+    width: auto;
+}
+
+.gallery-preview {
+    display: flex;
+}
+
+.gallery-preview img {
+    height: 100px;
+    border: 1px solid white;
+    flex-grow: 1;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+img.pic-active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1032px) {
+    .exhibitions {
+        display: block;
+    }
+
+    .exhibition-description {
+        width: 100%;
+        height: 30%;
+    }
+
+    .exhibition-description::before {
+        top: 0;
+        bottom: 70%;
+        left: 0;
+        right: 0;
+    }
+
+    .exhibition-gallery {
+        width: 100%;
+        padding: 3rem;
+        flex-direction: column-reverse;
+    }
+
+    .exhibition-footer {
+        top: 10rem;
+    }
+}
+
+/*******   ******    *****          subscribe page            ****    ******    **********/
+
+.sign-up-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100vh;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+    font-family: "space mono", monospace;
+}
+
+.sign-up-card form {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    font-size: 2vh;
+}
+
+.sign-up-card input {
+    height: 6vh;
+    border: 1px solid rgb(145, 145, 145);
+    border-bottom: 0;
+}
+
+.sign-up-card .button {
+    height: 6vh;
+    background-color: rgb(96, 131, 163);
+    color: white;
+    border: 1px solid rgb(145, 145, 145);
+    /* border-radius:10%; */
+}
+
+.sign-up-card button:hover {
+    background-color: #1C658C;
+}
+
+@media screen and (max-width: 1032px) {
+    .sign-up-card {
+        max-width: 100%;
+        height: 80vh;
+    }
+}

@@ -1,0 +1,172 @@
+/***************           header + menu + footer                     *********/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem 3rem 2rem;
+    font-family: monospace, sans-serif;
+    font-weight: 200;
+    line-height: 2.5rem;
+    z-index: 999;
+    background-color: white;
+    opacity: 0.8;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-name {
+    display: inline-block !important;
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked~.menu-content {
+    max-height: 100%;
+}
+
+.title-small {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.logo {
+    display: inline;
+}
+
+.divider {
+    width: 60px;
+    height: 0;
+    border: 1px solid;
+    border-color: rgba(196, 195, 195, 0.8);
+}
+
+.footer-small {
+    display: block;
+    position: relative;
+    bottom: 0;
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+.site-info {
+    font-size: 13px;
+    font-weight: 200;
+    padding: 0 2rem 0 0;
+    line-height: 1.7rem;
+}
+
+.copyright {
+    font-size: 9px;
+    font-weight: 100;
+    padding-right: 2rem;
+    z-index: 4;
+}
+
+/***** **** *** ******        Grid Gallery        ***** ***** ***** ***************************/
+.image-grid-gallery {
+    margin-top: 5rem;
+    padding: 5rem 3rem;
+}
+
+.image-grid {
+    /* set variables to be used later  */
+    --gap: 16px;
+    --num-cols: 6;
+    --row-height: 270px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+
+    gap: var(--gap);
+}
+
+/* fit the image into the grid cell  */
+.image-grid>img {
+    width: 100%;
+    height: 100%;
+
+    /* make images fit into the cells responsively  */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* create class for images that take 2 times the collumn  */
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+.grid-item:hover {
+    opacity: 0.7;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+@media screen and (max-width: 1023px) {
+    .image-grid{
+        --num-cols: 4;
+    }
+    .grid-item:nth-child(13){
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid{
+        --num-cols: 2;
+    }
+    .grid-item:nth-child(13){
+        grid-row-start: 8;
+        grid-row-end: 9;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
