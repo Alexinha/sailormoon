@@ -492,6 +492,7 @@ img.pic-active {
         display: block;
         position: relative;
         bottom: 8rem;
+        padding: 0, 2rem;
     }
     #mc_embed_signup h3, form{
         position: relative;
